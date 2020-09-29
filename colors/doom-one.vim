@@ -20,8 +20,8 @@ function!  Coloring(group,guibg,guifg,gui,ctermbg,ctermfg)
   execute highlightstr 
 endfunction
 
-"let _bg         = "#282c34"
-let _bg         = "#2E3440"
+let _bg         = "#282c34"
+"let _bg         = "#2E3440"
 let _bg_alt     = "#21242b"
 let _base0      = "#1B2229"
 let _base1      = "#1c1f24"
@@ -49,6 +49,31 @@ let _cyan       = "#46D9FF"
 let _dark_cyan  = "#5699AF"
 let _violet_li  = "#DCADEB"
 " #c09ec2
+
+"+- Vim 8 Terminal Colors -+
+if has('terminal')
+  let g:terminal_ansi_colors = [_red, _blue, _green, _orange, _blue, _magenta, _yellow, _magenta, _violet, _red, _red, _red, _red, _red, _red, _red]
+endif
+
+"+- Neovim Terminal Colors -+
+if has('nvim')
+  let g:terminal_color_0 = _red
+  let g:terminal_color_1 = _blue
+  let g:terminal_color_2 = _green
+  let g:terminal_color_3 = _orange
+  let g:terminal_color_4 = _blue
+  let g:terminal_color_5 = _magenta
+  let g:terminal_color_6 = _yellow
+  let g:terminal_color_7 = _magenta
+  let g:terminal_color_8 = _violet 
+  let g:terminal_color_9 = _red 
+  let g:terminal_color_10 = _red 
+  let g:terminal_color_11 = _red 
+  let g:terminal_color_12 = _red 
+  let g:terminal_color_13 = _red 
+  let g:terminal_color_14 = _red 
+  let g:terminal_color_15 = _red 
+endif
 
 call Coloring("Normal", _bg, _fg, "NONE", "NONE","9")
 call Coloring("Special", _bg, _fg, "NONE", "NONE","9")
